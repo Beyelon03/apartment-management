@@ -1,0 +1,165 @@
+.apartments-list {
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.apartments-list h1 {
+  font-size: 28px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  grid-column: span 3;
+}
+
+.apartment-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.apartment-item .apartment {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 380px;
+}
+
+.apartment-item .apartment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.apartment-item .apartment h2 {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.apartment-item .apartment p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.apartment-item .apartment .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.apartment-item .apartment .rooms {
+  font-size: 16px;
+  color: #17a2b8;
+}
+
+.apartment-item .apartment .apartment-images {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.apartment-item .apartment .apartment-images img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.apartment-item .apartment .apartment-images img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.apartment-item .apartment button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: var(--button-radius);
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.apartment-item .apartment button:hover {
+  background-color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+  .apartments-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .apartments-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.close-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.enlarged-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-enlarged-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
