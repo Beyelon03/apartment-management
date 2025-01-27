@@ -19,10 +19,6 @@ build/
 out/
 *.tsbuildinfo
 
-# Environment variables
-.env
-.env.*.local
-
 # IDE/Editor files
 .vscode/
 .idea/
